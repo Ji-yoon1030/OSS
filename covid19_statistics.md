@@ -13,7 +13,6 @@ sum_people = sum(n_people) # TODO) The total number of people
 sum_covid = sum(n_covid) # TODO) The total number of new cases
 norm_covid = normalize_data(n_covid, n_people, 1000000) # The new cases per 1 million people
 
-# Print population by region
 print('### Korean Population by Region')
 print('* Total population:', sum_people)
 print() # Print an empty line
@@ -24,7 +23,6 @@ for idx, pop in enumerate(n_people):
     print('| %s | %d | %.1f |' % (regions[idx], pop, ratio))
 print()
 
-# TODO) Print COVID-19 new cases by region
 print('| Region  | New Cases | Cases per 1M |')
 print('| ------- | --------- | ------------ |')
 for idx, cases in enumerate(n_covid):
