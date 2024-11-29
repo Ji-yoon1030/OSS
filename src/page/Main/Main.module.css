@@ -1,0 +1,124 @@
+/* 메인 컨테이너 */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap');
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #0d0d0d; /* 깊은 검정 배경 */
+  color: #ffffff; /* 기본 텍스트 흰색 */
+}
+
+/* 헤더 */
+.header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.title {
+  font-family: 'IBM Plex Sans KR';
+  font-size: 5rem;
+  font-weight: 600;
+  color: #00d8ff; /* 네온 블루 */
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'IBM Plex Sans KR';
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #cccccc; /* 라이트 그레이 */
+}
+
+/* 주요 기능 섹션 */
+.features {
+  margin: 40px 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+.sectionTitle {
+  font-family: 'IBM Plex Sans KR';
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.featureCards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.featureCard {
+  font-family: 'IBM Plex Sans KR';
+  background-color: #1a1a1a; /* 다크 그레이 배경 */
+  border: 1px solid #333333; /* 경계선 */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  color: #a0e7e5; /* 아이스 블루 */
+}
+
+.featureCard h3 {
+  font-family: 'IBM Plex Sans KR';
+  font-size: 1.2rem;
+  height: 7vh;
+  margin-bottom: 10px;
+  color: #00d8ff; /* 네온 블루 */
+}
+
+.featureCard p {
+  font-family: 'IBM Plex Sans KR';
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Call to Action 섹션 */
+.cta {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.cta h2 {
+  font-family: 'IBM Plex Sans KR';
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.cta p {
+  font-family: 'IBM Plex Sans KR';
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.ctaButton {
+  font-family: 'IBM Plex Sans KR';
+  background-color: #00d8ff;
+  color: #0d0d0d;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #4adede; /* 라이트 블루로 전환 */
+}
+
+/* 푸터 */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #aaaaaa;
+  border-top: 1px solid #333333;
+  margin-top: 20px;
+}
