@@ -1,0 +1,31 @@
+.cont {
+  margin: 0;
+  background-color: #090916;
+  width: 100%;
+}
+
+.cont_logo {
+  margin: 0;
+}
+
+.logo {
+  display: block; /* 로고를 블록 요소로 설정 */
+  width: auto; /* 이미지가 원래 비율을 유지 */
+  max-width: 100px; /* 최대 크기 설정 (필요 시 조정) */
+  height: auto; /* 비율에 맞춰 높이 자동 조정 */
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 0 3rem;
+  background-color: #f8f9fa;
+}
+
+.props {
+  align-items: center;
+}

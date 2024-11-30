@@ -1,0 +1,22 @@
+.top_section {
+  margin-top: 1%;
+}
+
+.title {
+  color: #000;
+  font-family: 'IBM Plex Sans KR';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px;
+  margin-left: 10vw;
+  margin-top: 2%;
+}
+
+.editor_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1%;
+}

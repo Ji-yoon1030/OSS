@@ -1,0 +1,35 @@
+.container {
+  margin: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  border-radius: 20px;
+  background: #090916;
+  width: 80vw;
+  height: 40vh;
+}
+
+.title {
+  margin: 1.5% 2%;
+  color: #f0e7f7;
+  font-family: 'IBM Plex Sans KR';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 70px; /* 140% */
+}
+
+.problem {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2% 1.5% 2%;
+  color: #f0f0f0;
+  font-family: 'IBM Plex Sans KR';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 70px; /* 175% */
+}
