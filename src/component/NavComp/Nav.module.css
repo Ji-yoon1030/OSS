@@ -1,11 +1,12 @@
 .cont {
   margin: 0;
   background-color: #090916;
-  width: 100%;
+  width: 100% !important;
+  display: flex;
 }
 
 .cont_logo {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .logo {
@@ -16,7 +17,7 @@
   margin: 0;
 }
 
-.navbar {
+/* .navbar {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -24,6 +25,16 @@
   padding: 0.5rem 0;
   margin: 0 3rem;
   background-color: #f8f9fa;
+} */
+
+.menu {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.text {
+  color: #fff !important;
 }
 
 .props {

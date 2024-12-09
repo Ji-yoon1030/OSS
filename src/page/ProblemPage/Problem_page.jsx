@@ -1,8 +1,8 @@
-import React from 'react';
-import problem from './Problem.module.css';
-import CodeCompiler from '../../component/CodeCompiler/CodeCompiler';
-import CodeOutput from '../../component/CodeCompiler/CodeOutput';
-import { OutputProvider } from '../../component/CodeCompiler/Compiler';
+import React from "react";
+import problem from "./Problem.module.css";
+import CodeCompiler from "../../component/CodeCompiler/CodeCompiler";
+import CodeOutput from "../../component/CodeCompiler/CodeOutput";
+import { OutputProvider } from "../../component/CodeCompiler/Compiler";
 
 const Problem_page = () => {
   return (
@@ -13,12 +13,16 @@ const Problem_page = () => {
           <a
             className={problem.problem}
             href="https://www.acmicpc.net/problem/1000"
+            target="_blank"
+            rel="noreferrer"
           >
             https://www.acmicpc.net/problem/1000
           </a>
           <a
             className={problem.problem}
             href="https://www.acmicpc.net/problem/1000"
+            target="_blank"
+            rel="noreferrer"
           >
             https://www.acmicpc.net/problem/1000
           </a>
