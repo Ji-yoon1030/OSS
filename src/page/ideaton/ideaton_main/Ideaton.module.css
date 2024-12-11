@@ -1,0 +1,105 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.header h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+.newPostButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newPostButton:hover {
+  background-color: #0056b3;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.postCard {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.postCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.postTitle {
+  font-size: 1.4em;
+  color: #333;
+  margin: 0;
+}
+
+.postDate {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.postPreview {
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.postFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.postAuthor {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.readMoreButton {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.readMoreButton:hover {
+  background-color: #007bff;
+  color: white;
+}

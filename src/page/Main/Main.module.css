@@ -1,5 +1,5 @@
 /* 메인 컨테이너 */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap");
 
 .mainContainer {
   display: flex;
@@ -17,7 +17,7 @@
 }
 
 .title {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   font-size: 5rem;
   font-weight: 600;
   color: #00d8ff; /* 네온 블루 */
@@ -25,7 +25,7 @@
 }
 
 .subtitle {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   font-size: 1.8rem;
   font-weight: 500;
   color: #cccccc; /* 라이트 그레이 */
@@ -39,7 +39,7 @@
 }
 
 .sectionTitle {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
@@ -53,7 +53,7 @@
 }
 
 .featureCard {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   background-color: #1a1a1a; /* 다크 그레이 배경 */
   border: 1px solid #333333; /* 경계선 */
   border-radius: 8px;
@@ -63,10 +63,13 @@
   max-width: 300px;
   text-align: center;
   color: #a0e7e5; /* 아이스 블루 */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
 }
 
 .featureCard h3 {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   font-size: 1.2rem;
   height: 7vh;
   margin-bottom: 10px;
@@ -74,9 +77,15 @@
 }
 
 .featureCard p {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   font-size: 1rem;
   color: #cccccc;
+}
+
+/* Optional: Add hover effects */
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Call to Action 섹션 */
@@ -86,20 +95,20 @@
 }
 
 .cta h2 {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   font-size: 2.5rem;
   color: #ffffff;
 }
 
 .cta p {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   font-size: 1rem;
   color: #cccccc;
   margin-bottom: 20px;
 }
 
 .ctaButton {
-  font-family: 'IBM Plex Sans KR';
+  font-family: "IBM Plex Sans KR";
   background-color: #00d8ff;
   color: #0d0d0d;
   font-size: 1rem;
@@ -112,6 +121,8 @@
 
 .ctaButton:hover {
   background-color: #4adede; /* 라이트 블루로 전환 */
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 /* 푸터 */
@@ -121,4 +132,65 @@
   color: #aaaaaa;
   border-top: 1px solid #333333;
   margin-top: 20px;
+}
+
+/* Add these new animation definitions */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Add these classes */
+.fadeInDown {
+  animation: fadeInDown 1s ease forwards;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
 }

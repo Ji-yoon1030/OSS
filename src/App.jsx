@@ -1,14 +1,17 @@
 import React, { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 
-import Login_page from "./page/LoginPage/Login_page";
-import Problem_page from "./page/ProblemPage/Problem_page";
+import LoginPage from "./page/LoginPage/Login_page";
+import ProblemPage from "./page/ProblemPage/Problem_page";
 
 import Main from "../src/page/Main/Main";
 import SubmittedPage from "./page/SubmittedPage/SubmitCode";
-import CodeOutput from "./component/CodeCompiler/CodeOutput";
+import Ideaton from "./page/ideaton/ideaton_main/Ideaton";
+import PostNew from "./page/ideaton/ideaton_post/PostNew";
 
 import Navbar from "./component/NavComp/Navbar";
+import Signuppage from "./page/Signup/SignupPage";
+import Vote from "./page/Vote/vote";
 
 const ChangeBodyColor = () => {
   const location = useLocation();
@@ -36,14 +39,18 @@ function App() {
   return (
     <>
       <ChangeBodyColor />
-      {location.pathname !== "/main" && location.pathname !== "/login" && (
+      {location.pathname !== "/" && location.pathname !== "/login" && (
         <Navbar />
       )}
       <Routes>
-        <Route path="/login" element={<Login_page />}></Route>
-        <Route path="/problem" element={<Problem_page />}></Route>
-        <Route path="/main" element={<Main />}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/signup" element={<Signuppage />}></Route>
+        <Route path="/problem" element={<ProblemPage />}></Route>
+        <Route path="/" element={<Main />}></Route>
         <Route path="/submit" element={<SubmittedPage />}></Route>
+        <Route path="/vote" element={<Vote />}></Route>
+        <Route path="/ideaton" element={<Ideaton />} />
+        <Route path="/ideaton/new" element={<PostNew />} />
       </Routes>
     </>
   );

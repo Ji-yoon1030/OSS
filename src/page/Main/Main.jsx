@@ -1,27 +1,42 @@
-import React from 'react';
-import styles from '../Main/Main.module.css'; // CSS 모듈 파일 import
-import { useNavigate } from 'react-router-dom';
-import logo from '../../img/Logo_light.png';
+import React, { useEffect } from "react";
+import styles from "../Main/Main.module.css"; // CSS 모듈 파일 import
+import { useNavigate } from "react-router-dom";
+import logo from "../../img/Logo_light.png";
 
 const MainPage = () => {
   const navigate = useNavigate(); // React Router의 useNavigate 훅 사용
 
+  useEffect(() => {
+    // Add fade-in animation to feature cards sequentially
+    const cards = document.querySelectorAll(`.${styles.featureCard}`);
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      }, 200 * (index + 1));
+    });
+  }, []);
+
   const handleButtonClick = () => {
-    navigate('/login'); // 경로를 /login으로 변경
+    navigate("/signup"); // 경로를 /login으로 변경
   };
   return (
     <div className={styles.mainContainer}>
       {/* Header Section */}
       <header className={styles.header}>
-        <h1 className={styles.title}>
-          <img src={logo} alt="logo" height={'200px'}></img>
+        <h1 className={`${styles.title} ${styles.fadeInDown}`}>
+          <img src={logo} alt="logo" height={"200px"}></img>
         </h1>
-        <p className={styles.subtitle}>: Orbiting Around Success</p>
+        <p className={`${styles.subtitle} ${styles.fadeInUp}`}>
+          : Orbiting Around Success
+        </p>
       </header>
 
-      {/* Features Section */}
+      {/* Features Section - cards will animate via useEffect */}
       <section className={styles.features}>
-        <h2 className={styles.sectionTitle}>✨ 주요 기능</h2>
+        <h2 className={`${styles.sectionTitle} ${styles.fadeIn}`}>
+          ✨ 주요 기능
+        </h2>
         <div className={styles.featureCards}>
           <div className={styles.featureCard}>
             <h3>🚀 함께 푸는 알고리즘</h3>
@@ -42,10 +57,13 @@ const MainPage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className={styles.cta}>
+      <section className={`${styles.cta} ${styles.fadeIn}`}>
         <h2>지금 바로 시작하세요!</h2>
         <p>Orb1t에서 학습 목표를 달성하고 커뮤니티의 스타가 되세요.</p>
-        <button className={styles.ctaButton} onClick={handleButtonClick}>
+        <button
+          className={`${styles.ctaButton} ${styles.pulse}`}
+          onClick={handleButtonClick}
+        >
           회원가입하기
         </button>
       </section>

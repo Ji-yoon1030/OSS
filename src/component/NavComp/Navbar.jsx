@@ -26,8 +26,8 @@ function BasicExample() {
                 오늘의 Best Coder
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link className={nav.text} href="/ieaton">
-              아이디어톤
+            <Nav.Link className={nav.text} href="/ideaton">
+              추천문제
             </Nav.Link>
             <Nav.Link className={nav.text} href="/mypage">
               마이페이지
